@@ -10,6 +10,7 @@ class Solution {
             }
             if(cl==cr){
                 ans++;
+                
             }
         }return ans;
     }
