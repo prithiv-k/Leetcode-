@@ -1,17 +1,23 @@
 class Solution {
     public String firstPalindrome(String[] words) {
-        String fin="";
-        for(int i=0;i<words.length;i++){
-            String s=words[i];
-            String ans="";
-            for(int j=s.length()-1;j>=0;j--){
-                ans+=s.charAt(j);
+        for(String word:words){
+            if(isPalindrome(word)){
+                return word;
             }
-            if(ans.equals(s)){
-                fin=s;
-                break;
             }
-        }return fin;
-        
+        return "";
+    }
+    public static boolean isPalindrome(String s){
+        int start=0;
+        int end=s.length()-1;
+        while(start<end){
+            if(s.charAt(start)!=s.charAt(end)){
+                return false;
+            }else{
+                start++;
+                end--;
+            }
+        }
+        return true;
     }
 }
