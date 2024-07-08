@@ -10,10 +10,10 @@ class Solution {
         else{
             for(int i=0;i<n;i++){
                 sum+=nums[i];
-                if(sum>coins){
-                    break;
-                }else{
+                if(sum<=coins){
                     ans++;
+                }else{
+                    break;
                 }
             }
         }return ans;
