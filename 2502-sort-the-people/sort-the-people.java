@@ -7,15 +7,12 @@ class Solution {
         }
         Arrays.sort(heights);
         int j=0;
-        int fin[]=new int[heights.length];
-        for(int i=heights.length-1;i>=0;i--){
-            fin[j]=heights[i];
-            j++;
-        }
         String[] ans=new String[names.length];
-        for(int i=0;i<heights.length;i++){
-            ans[i]=hm.get(fin[i]);
-
+        for(int i=heights.length-1;i>=0;i--){
+            ans[j]=hm.get(heights[i]);
+            j++;
         }return ans;
+        
+        
     }
 }
