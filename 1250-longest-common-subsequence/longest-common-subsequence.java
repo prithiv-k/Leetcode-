@@ -21,9 +21,8 @@ class Solution {
             dp[n][m]=1+ip(s1,s2,n-1,m-1,dp);
             return dp[n][m];
         }else{
-            int a=ip(s1,s2,n-1,m,dp);
-            int b=ip(s1,s2,n,m-1,dp);
-            dp[n][m]= Math.max(a,b);
+            
+            dp[n][m]= Math.max(ip(s1,s2,n-1,m,dp),ip(s1,s2,n,m-1,dp));
             return dp[n][m];
         }
     }
